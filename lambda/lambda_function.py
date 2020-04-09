@@ -23,14 +23,29 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
+class launch(AbstractRequestHandler):
+    """Handler for Skill Launch and get_stats Intent."""
+
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return (is_request_type("LaunchRequest")(handler_input))
+
+    def handle(self, handler_input):
+        # type: (HandlerInput) -> Response
+        logger.info("In getStats_Intent")
+        
+        speech = "Hello, this skill is dedicated to find information on COVID-19 virus statistics. You can start by requesting info on any country."
+        
+        handler_input.response_builder.speak(speech)
+        return handler_input.response_builder.response
+
 # Built-in Intent Handlers
 class get_stats_for_country(AbstractRequestHandler):
     """Handler for Skill Launch and get_stats Intent."""
 
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return (is_request_type("LaunchRequest")(handler_input) or
-                is_intent_name("getStatsForCountry_Intent")(handler_input))
+        return (is_intent_name("getStatsForCountry_Intent")(handler_input))
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
@@ -239,6 +254,7 @@ class ResponseLogger(AbstractResponseInterceptor):
 
 
 # Register intent handlers
+sb.add_request_handler(launch())
 sb.add_request_handler(get_stats_for_country())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
