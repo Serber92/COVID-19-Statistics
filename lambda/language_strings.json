@@ -1,0 +1,12 @@
+{
+	"en": {
+		"SKILL_NAME": "corona virus",
+		"HELP_MESSAGE": "You can say tell me statistics on Italy, or, you can say exit... What can I help you with?",
+		"HELP_REPROMPT": "What can I help you with?",
+		"FALLBACK_MESSAGE": "The Corona Statistics skill can't help you with that.  It can help you find info on current situation with virus stats.",
+		"FALLBACK_REPROMPT": "What can I help you with?",
+		"ERROR_MESSAGE": "Sorry, an error occurred.",
+		"STOP_MESSAGE": "Goodbye!",
+		"EXCEPTION_MESSAGE": "Sorry, I wasn't able to retrieve info at this moment, please try again."
+	}
+}

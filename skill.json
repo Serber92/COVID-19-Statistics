@@ -1,0 +1,53 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Statistics from every reporting country available as of todays date.",
+          "examplePhrases": [
+            "Alexa ask corona virus statistics for Finland",
+            "Alexa tell corona virus statistics in United States",
+            "Alexa ask corona virus information on Japan"
+          ],
+          "keywords": [
+            "corona",
+            "virus",
+            "statistics",
+            "news"
+          ],
+          "name": "COVID-19 Statistics",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "description": "This skill uses publicly available data about current confirmed cases, deaths, and recoveries of the COVID-19 virus AKA Coronavirus compiled by Johns Hopkins University. In the current version supports filtering by countries. \nIn future versions other filters will be added. \nOpen to any suggestions.",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [],
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "using this api https://rapidapi.com/KishCom/api/covid-19-coronavirus-statistics/details",
+      "category": "HEALTH_AND_FITNESS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:188496864346:function:e09b9b45-4f5a-4058-b3c1-07a257fc9cb4:Release_0"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "corona virus",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "getStatsForCountry_Intent",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "for {country}",
+            "in {country}",
+            "statistics in {country}",
+            "how much recovered in {country}",
+            "how much deaths in {country}",
+            "how much confirmed in {country}",
+            "news on {country}",
+            "information on {country}",
+            "whats going on in {country}",
+            "situation in {country}",
+            "about {country}",
+            "info on {country}",
+            "info for {country}",
+            "stats for {country}",
+            "statistics for {country}"
+          ]
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "9"
+}
